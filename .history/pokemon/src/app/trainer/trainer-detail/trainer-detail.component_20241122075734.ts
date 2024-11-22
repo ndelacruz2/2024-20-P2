@@ -8,7 +8,7 @@ import { PokemonModule } from "../../pokemon/pokemon.module";
   selector: 'app-trainer-detail',
   templateUrl: './trainer-detail.component.html',
   styleUrls: ['./trainer-detail.component.css'],
-  imports: [PokemonModule, PokemonModule],
+  imports: [PokemonModule],
 })
 export class TrainerDetailComponent implements OnInit {
   @Input() trainerDetail!: Trainer;

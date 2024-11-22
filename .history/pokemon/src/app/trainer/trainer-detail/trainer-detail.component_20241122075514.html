@@ -1,7 +1,7 @@
 <div class="trainer-detail">
   <div *ngIf="trainerDetail">
     <h2>{{ trainerDetail.name }}</h2>
-    <p>{{trainerDetail.bigSnopsies}}</p>
+    <p>{{trainerDetail.description}}</p>
   </div>
   <h2>{{ trainerDetail.name }}</h2>
   <img [src]="trainerDetail.imageUrl" [alt]="trainerDetail.name" />
@@ -9,5 +9,4 @@
   <p><strong>About...</strong> {{ trainerDetail.bigSnopsies }}</p>
   <p><strong>Pokemons:</strong></p>
   <app-pokemon-list [pokemonList]="trainerDetail.pokemons"></app-pokemon-list>
-
 </div>

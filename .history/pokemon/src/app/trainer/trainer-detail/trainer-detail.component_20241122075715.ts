@@ -2,13 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Trainer } from '../Trainer';
 import {TrainerService} from '../../trainer/trainer.service';  
 import { ActivatedRoute } from '@angular/router';
-import { PokemonModule } from "../../pokemon/pokemon.module";
 
 @Component({
   selector: 'app-trainer-detail',
   templateUrl: './trainer-detail.component.html',
   styleUrls: ['./trainer-detail.component.css'],
-  imports: [PokemonModule, PokemonModule],
 })
 export class TrainerDetailComponent implements OnInit {
   @Input() trainerDetail!: Trainer;

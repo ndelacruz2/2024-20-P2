@@ -1,7 +1,7 @@
 <div>
   <ul>
     <li *ngFor="let trainer of trainers">
-      <a routerLink="['/trainers', trainer.id]">{{ trainer.name }}</a>
+      <a [routerLink]="['/trainers', trainer.id]">{{ trainer.name }}</a>
     </li>
   </ul>
     <table>

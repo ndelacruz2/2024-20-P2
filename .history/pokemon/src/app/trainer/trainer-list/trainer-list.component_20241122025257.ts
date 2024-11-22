@@ -1,20 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Trainer } from '../Trainer';
 import { dataTrainers } from '../dataTrainers';
-import {TrainerService} from '../../trainer/trainer.service';
 
 @Component({
   selector: 'app-trainer-list',
   templateUrl: './trainer-list.component.html',
   styleUrls: ['./trainer-list.component.css'],
 })
-
 export class TrainerListComponent implements OnInit {
   trainers: Array<Trainer> = [];
   selected: Boolean = false;
   selectedTrainer!: Trainer;
-
-  constructor(private trainerService: TrainerService) {}
+  constructor() {}
 
   getTraunersList(): Array<Trainer> {
     return dataTrainers;
@@ -22,9 +19,6 @@ export class TrainerListComponent implements OnInit {
 
   ngOnInit() {
     this.trainers = this.getTraunersList();
-    this.trainerService.getTrainers().subscribe((data: Trainer[]) => {
-      this.trainers = data;
-    });
   }
 
   onSelected(trainer: Trainer) {

@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Trainer } from '../Trainer';
 import { dataTrainers } from '../dataTrainers';
 import {TrainerService} from '../../trainer/trainer.service';
+import { TrainerDetailComponent } from "../../components/trainer-detail/trainer-detail.component";
 
 @Component({
   selector: 'app-trainer-list',
   templateUrl: './trainer-list.component.html',
   styleUrls: ['./trainer-list.component.css'],
+  imports: [TrainerDetailComponent],
 })
 
 export class TrainerListComponent implements OnInit {

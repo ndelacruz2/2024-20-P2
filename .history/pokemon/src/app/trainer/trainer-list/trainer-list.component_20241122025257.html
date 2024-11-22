@@ -1,9 +1,10 @@
 <div>
-  <ul>
-    <li *ngFor="let trainer of trainers">
-      <a routerLink="['/trainers', trainer.id]">{{ trainer.name }}</a>
-    </li>
-  </ul>
+  <div>
+    <div *ngIf="selected">
+      <app-trainer-detail
+        [trainerDetail]="selectedTrainer"
+      ></app-trainer-detail>
+    </div>
     <table>
       <thead>
         <tr>
@@ -35,4 +36,4 @@
       </tbody>
     </table>
   </div>
-
+</div>
